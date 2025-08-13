@@ -1,0 +1,17 @@
+.primaryButton {
+    background-color: $bg_color_prim;
+    color: $text_color_sec;
+    &:hover {
+        background-color: darken($bg_color_prim, 10%);
+        color: $text_color_sec;
+    }
+}
+
+.secondaryButton {
+    background-color: $bg_color_sec;
+    color: $text_color_sec;
+    &:hover {
+        background-color: darken($bg_color_sec, 10%);
+        color: $text_color_sec;
+    }
+}

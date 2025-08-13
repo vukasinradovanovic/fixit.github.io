@@ -1,0 +1,52 @@
+.footer_main{
+    &Info {
+        &Holder {
+            &Item {
+                position: relative;
+                padding: px-to-rem(3);
+                list-style: none;
+                &Link {
+                    @each $name, $unicode in $icons_info_section {
+                    &--#{$name}::before {
+                        @include icon($unicode);          //Mixin for generating icons
+                        }
+                        color: $text_color_sec;
+                        @include hoverText;
+                        font-size: rem(15);
+                        transition: all $transition ease;
+                        &Text {
+                            padding: 0 rem(20);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &Icons {
+        &Holder {
+            &Item {
+                position: relative;
+                padding: px-to-rem(12);
+                list-style: none;
+                &Link {
+                    @each $name, $unicode in $icons_social_media {
+                    &--#{$name}::before {
+                        @include icon($unicode);          //Mixin for generating icons
+                        }
+                        color: $text_color_sec;
+                        @include hoverText($text_color_ax, transparent);
+                        font-size: rem(25);
+                        padding: rem(10);
+                        transition: all $transition ease;
+                        &Text {
+                            display: none;
+                            padding: 0 rem(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}

@@ -1,0 +1,33 @@
+$transition : 0.3s;
+$radius : rem(6);
+$size-header : rem(40);
+
+// Font variables
+$font-family: 'Montserrat', sans-serif;
+$font-size-base: rem(16);
+$font-size-lg: rem(18);
+$font-size-sm: rem(14);
+$logo-font-family: $font-family;
+
+//Loader variables
+$spinner-size: rem(65);
+$spinner-animation-duration: 2s;
+$spinner-border-width: rem(7);
+$logo-font-size: rem(60);
+
+//Form variabiles
+$form-padding : rem(12);
+$border-radius-form: $radius;
+
+// Transparacy variables
+$transparacy: 0.75;
+$transparacy-sec: 0.1;
+
+// Blur filter variable
+$blur-filter: rem(4);
+
+// Shadow variables
+$shadow-offset-x: rem(3);
+$shadow-offset-y: rem(5);
+$shadow-blur-radius: rem(4);
+$shadow-color: rgba(0, 0, 0, 0.5);

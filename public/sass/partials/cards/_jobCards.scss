@@ -1,0 +1,72 @@
+.jobCards {
+  &_card {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: rem(300);
+    border-radius: $radius;
+    overflow: hidden;
+    color: $text_color_sec;
+
+    @include custom-box-shadow(); // primena mixina sa podrazumevanim promenljivim
+    @include img-filter-blur(); // primena mixina sa podrazumevanim promenljivim
+
+    // Detaljan tekst (skriven inicijalno)
+    &-details {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      z-index: 3;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity $transition;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    h3 {
+      z-index: 3;
+      padding: rem(6) rem(12);
+      margin-bottom: 0;
+      border-radius: $radius;
+      color: $text_color_sec;
+      background-color: $bg_color_sec;
+      position: relative;
+      transition: opacity $transition, background-color $transition;
+      @include translate-in(rem(50));
+    }
+
+    p,
+    button {
+      z-index: 3;
+      position: relative;
+      opacity: 0;
+      transition: opacity $transition;
+    }
+
+    // Hover efekat
+    &:hover,
+    &:focus-within {
+      .jobCards_card-details {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      h3 {
+        color: $text_color_sec;
+        background-color: transparent;
+        @include translate-reset();
+      }
+      p,
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.hero {
+    &_carousel {
+        &Inner {
+            &Item {
+                position: relative;
+                height: 90vh;
+                &Image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    @include img-filter(#000, $transparacy);
+                }
+
+                &Caption {  
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -30%);
+                    z-index: 2;
+                    &Header {
+                        font-size: rem(28);
+                        font-weight: bold;
+                        margin-bottom: rem(10);
+                    }
+
+                    &Text {
+                        font-size: rem(18);
+                        margin-bottom: rem(20);
+                    }
+                }
+            }
+        }
+    }
+}

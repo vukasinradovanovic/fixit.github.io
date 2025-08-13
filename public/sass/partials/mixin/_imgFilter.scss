@@ -1,0 +1,39 @@
+@mixin img-filter($color, $opacity) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color;
+    opacity: $opacity;
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+@mixin img-filter-blur($color: $bg_color_prim, $opacity: $transparacy-sec, $blur: $blur-filter) {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color;
+    opacity: $opacity;
+    z-index: 2;
+    pointer-events: none;
+    backdrop-filter: blur($blur);
+    transition: opacity 0.3s, backdrop-filter 0.3s;
+  }
+  &:hover, &:focus-within {
+    &::after {
+      opacity: 0.85;
+      backdrop-filter: blur($blur);
+    }
+  }
+}

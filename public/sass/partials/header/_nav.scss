@@ -1,0 +1,21 @@
+.navHolder {
+    transition: opacity $transition ease;;
+    background-color: $bg_color_sec;
+    &.scrolled {
+        opacity: $transparacy;
+    }
+    .nav_listItem {
+        &Link {
+            color: $text_color_sec;
+            border-radius: $radius;
+            @include hoverText();
+        }
+    }
+    .nav_logoText {
+        color: $text_color_sec;
+        border-radius: $radius;
+        @include hoverText();
+    }
+    
+} 
+  

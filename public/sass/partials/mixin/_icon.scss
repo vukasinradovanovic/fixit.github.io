@@ -1,0 +1,8 @@
+@mixin icon($unicode) {
+    display: inline-block;
+
+    font-family: "FontAwesome";
+    font-style: normal;
+
+    content: $unicode;
+  }
