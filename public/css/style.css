@@ -35,6 +35,25 @@ a {
   color: #fff;
 }
 
+.to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 999;
+  padding: 0.625rem 1.0625rem;
+  background: #003468;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  box-shadow: 0.1875rem 0.3125rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+.to-top-btn:hover {
+  background: #00468B;
+}
+
 #loader {
   position: fixed;
   top: 0;

@@ -1,0 +1,19 @@
+.to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: rem(40);
+  right: rem(40);
+  z-index: 999;
+  padding: rem(10) rem(17);
+  background: $bg_color_prim;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: rem(20);
+  @include custom-box-shadow;
+
+  &:hover {
+    background: $bg_color_sec;
+  }
+}

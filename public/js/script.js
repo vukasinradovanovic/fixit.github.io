@@ -1,3 +1,4 @@
+import { initButtons } from "./partials/buttons.js";
 import { initFooter } from "./partials/footer.js";
 import { initHero } from "./partials/hero.js";
 import { initInfoCards } from "./partials/infoCards.js";
@@ -6,7 +7,7 @@ import { initMainLoader } from "./partials/mainLoader.js";
 import { initModalForm } from "./partials/modalForm.js";
 import { initNavigation } from "./partials/navigation.js";
 
-//Loader - jQuery
+// Loader - jQuery
 $(document).ready(function () {
     initMainLoader();
 });
@@ -26,6 +27,9 @@ initModalForm();
 
 // Inicijalizacija kartica sa svim uslugama i detaljima
 initInfoCardsFull();
+
+// Inicijalizacija interaktivnih dugmića - jQuery
+initButtons();
 
 // Inicijalizacija futera sa svim potrebnim ikonama i linkovima
 initFooter();   
