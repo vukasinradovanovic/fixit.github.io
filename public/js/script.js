@@ -1,4 +1,5 @@
 import { initButtons } from "./partials/buttons.js";
+import { initFAQSection } from "./partials/FAQSection.js";
 import { initFooter } from "./partials/footer.js";
 import { initHero } from "./partials/hero.js";
 import { initInfoCards } from "./partials/infoCards.js";
@@ -27,6 +28,9 @@ initModalForm();
 
 // Inicijalizacija kartica sa svim uslugama i detaljima
 initInfoCardsFull();
+
+// Inicijalizacija FAQ sekcije
+initFAQSection();
 
 // Inicijalizacija interaktivnih dugmića - jQuery
 initButtons();

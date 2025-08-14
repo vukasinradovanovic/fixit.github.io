@@ -1,0 +1,35 @@
+.faq-section {
+    .faq-question {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: $bg_color_sec_lighter;
+        border: 1px solid #ddd;
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        color: $text_color_sec;
+
+        &:hover {
+            background-color: $bg_color_sec;
+        }
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        padding: 0 1rem;
+        border-left: rem(3) solid $bg_color_sec;
+        background-color: $bg_color_gray;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.4s ease,
+            padding 0.4s ease;
+
+        &.open {
+            max-height: rem(300); // dovoljno za većinu odgovora
+            opacity: 1;
+            padding: 0.8rem 1rem;
+        }
+    }
+}
