@@ -6,27 +6,30 @@ import { servicesList } from "./servicesList.js";
  * Kartice su responsive: 1 u redu na xs, 2 na md, 3 na lg+ ekranima.
  */
 export function initInfoCards() {
-    function cardMaker(card) {
-        return `
+    let html = '';
+    let tempRow = [];
+
+    servicesList.slice(0, 6).forEach((card, idx) => {
+        tempRow.push(`
         <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch mb-4">
             <div class="jobCards_card w-100 p-3 d-flex flex-column justify-content-center align-items-center" style="background-image: url('${card.bgi || "public/img/default.png"}');">
                 <h3>${card.label}</h3>
-                <p>${card.desc || "Opis usluge"}</p>
+                <p>${card.desc || "Detaljan opis usluge."}</p>
                 <button class="btn secondaryButton" data-bs-toggle="modal" data-bs-target="#questionModal" data-service-value="${card.value}">Zakaži uslugu</button>
             </div>
         </div>
-        `;
-    }
+        `);
 
-    let jobCardAllCode = '<div class="row justify-content-center">';
-    servicesList.slice(0, 6).forEach(function (card) {
-        jobCardAllCode += cardMaker(card);
+        // Kada su tri kartice ili poslednja, zatvori row
+        if (tempRow.length === 3 || idx === servicesList.length - 1) {
+            html += `<div class="row justify-content-center mb-4">${tempRow.join('')}</div>`;
+            tempRow = [];
+        }
     });
-    jobCardAllCode += '</div>';
 
     let jobCardHolder = document.querySelector(".jobCards");
 
     if (jobCardHolder) {
-        jobCardHolder.innerHTML = jobCardAllCode;
+        jobCardHolder.innerHTML = html;
     }
 }

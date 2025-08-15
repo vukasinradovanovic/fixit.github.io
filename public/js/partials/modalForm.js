@@ -79,7 +79,6 @@ export function initModalForm() {
     // Submit forme
     document.querySelector('.mainForm').addEventListener('submit', function (e) {
         e.preventDefault();
-        alert('Pitanje je poslato!');
         const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('questionModal'));
         modal.hide();
         this.reset();

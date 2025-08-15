@@ -26,7 +26,8 @@ export function initInfoCardsFull() {
         }
     });
 
-    const jobCardHolder = document.querySelector(".jobCards--full");
+    let jobCardHolder = document.querySelector(".jobCards--full");
+    
     if (jobCardHolder) {
         jobCardHolder.innerHTML = html;
     }

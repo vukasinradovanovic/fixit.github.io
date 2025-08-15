@@ -23,11 +23,11 @@ initHero();
 //Liata/Kartice za prikaz usluga koji je ucitavaju pomocu liste
 initInfoCards();
 
-// Modal forma za naručivanje usluga
-initModalForm();
-
 // Inicijalizacija kartica sa svim uslugama i detaljima
 initInfoCardsFull();
+
+// Modal forma za naručivanje usluga
+initModalForm();
 
 // Inicijalizacija FAQ sekcije
 initFAQSection();
