@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FixPlan | Usluge</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
-      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
     />
     <link rel="stylesheet" href="public/css/style.css" />
   </head>
   <body class="bg-body-tertiary">
-     <!-- Loader sekcija -->
+    <!-- Loader sekcija -->
     <div id="loader" class="bg-body-tertiary z-3">
       <div class="loader-content d-flex flex-column align-items-center">
         <h1 class="loader-logo">FixPlan</h1>
@@ -51,14 +53,17 @@
         <sectiion class="container-fluid banner--job position-relative">
           <div class="banner_overlay"></div>
           <div class="row">
-            <div class="col-11 d-flex flex-column justify-content-center align-items-end">
+            <div
+              class="col-11 d-flex flex-column justify-content-center align-items-end"
+            >
               <h2 class="banner_title text-right">FixPlan</h2>
               <p class="banner_text">
                 Vaš pouzdan partner za sve popravke i održavanje.
               </p>
             </div>
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-            </div>
+            <div
+              class="col-md-6 d-flex justify-content-center align-items-center"
+            ></div>
           </div>
         </sectiion>
         <div class="container-fluid text-center">
@@ -66,9 +71,7 @@
           <hr class="bg-primary" />
         </div>
         <!-- Sekcija kartica usluga -->
-        <section
-          class="container-fluid text-center p-5 jobCards--full"
-        >
+        <section class="container-fluid text-center p-5 jobCards--full">
           <!-- Kartice se dinamički generišu -->
         </section>
       </main>
@@ -101,5 +104,11 @@
 
     <!-- Modal za pitanja (možeš koristiti istu JS funkcionalnost kao na index.html) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="public/js/script.js"></script>
+  </body>
+</html>
