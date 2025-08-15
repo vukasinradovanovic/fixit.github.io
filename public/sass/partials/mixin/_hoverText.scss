@@ -1,8 +1,9 @@
-@mixin hoverText($color: $text_color_ax, $bgc: $bg_color_white, $trans: $transition){
+@mixin hoverText($color: $text_color_ax, $bgc: $bg_color_white, $trans: $transition) {
     transition: color $trans ease, background-color $trans ease;
     &:hover {
         color: $color;
         background-color: $bgc;
         border-radius: $radius;
+        @content;
     }
 }

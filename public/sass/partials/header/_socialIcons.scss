@@ -1,0 +1,21 @@
+.nav_socialIcons {
+  &Holder {
+    gap: rem(10);
+    list-style-type: none;
+    &Item {
+      padding: rem(10) rem(15);
+      font-weight: bold;
+
+      i {
+        color: $text_color_sec;
+        transition: color $transition ease;
+      }
+
+      &:hover i {
+        color: $text_color_ax;
+      }
+
+      @include hoverText;
+    }
+  }
+}

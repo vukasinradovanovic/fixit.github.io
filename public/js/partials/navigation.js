@@ -35,6 +35,52 @@ export function initNavigation() {
         navHolder.innerHTML = navLink;
     }
 
+    // Ikonice za društvene mreže
+    const nav_icons = [
+    {
+        name: "facebook",
+        slug: "#",
+        faClass: "fab fa-facebook-f"
+    },
+    {
+        name: "instagram",
+        slug: "#",
+        faClass: "fab fa-instagram"
+    },
+    {
+        name: "x",
+        slug: "#",
+        faClass: "fab fa-x-twitter"
+    },
+]
+
+    function socialIconMaker(icon) {
+        // Font Awesome klase za svaku mrežu
+        const faClasses = {
+            facebook: "fab fa-facebook-f",
+            instagram: "fab fa-instagram",
+            x: "fab fa-x-twitter"
+        };
+        let line = `<li class="nav_socialIconsHolderItem">
+            <a class="nav_socialIconsHolderItemLink nav_socialIconsHolderItemLink--${icon.name} d-flex align-items-center" href="${icon.slug}">
+                <i class="${faClasses[icon.name]}" aria-hidden="true"></i>
+            </a>
+        </li>`;
+        return line;
+    }
+
+    let nav_iconAllCode = "";
+
+    nav_icons.forEach(function (icon) {
+        nav_iconAllCode += socialIconMaker(icon);
+    });
+
+    let nav_iconContainer = document.querySelector(".nav_socialIconsHolder");
+
+    if (nav_iconContainer) {
+        nav_iconContainer.innerHTML = nav_iconAllCode;
+    }
+
     //Navigacija - meni koji ostaje na vrhu
     const navbar = document.querySelector('.navHolder');
 
