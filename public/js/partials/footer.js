@@ -22,12 +22,12 @@ export function initFooter() {
         {
             name: "doc",
             text: "DOKUMENTACIJA",
-            slug: "/public/img/dokumentacija.pdf"
+            slug: "public/img/dokumentacija.pdf"
         },
     ]
 
     function infoMaker(icon) {
-        let line = `<li class="footer_mainInfoHolderItem p-2"><a class="footer_mainInfoHolderItemLink footer_mainInfoHolderItemLink--${icon.name} d-flex align-items-center" href="${icon.slug}" target="_blank">
+        let line = `<li class="footer_mainInfoHolderItem p-2"><a class="footer_mainInfoHolderItemLink footer_mainInfoHolderItemLink--${icon.name} d-flex align-items-center" href="${icon.slug}">
         <span class="footer_mainInfoHolderItemLinkText">
             ${icon.text}
         </span></a></li>`;
