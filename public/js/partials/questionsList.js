@@ -14,5 +14,9 @@ export const questions = [
     {
         question: "Kako mogu da kontaktiram podršku?",
         answer: "Podršku možete kontaktirati putem email-a ili telefonom."
+    },
+    {
+        question: "Da li mogu dobiti posao preko vas?",
+        answer: "Nažalost, ne pružamo usluge zapošljavanja."
     }
 ];
