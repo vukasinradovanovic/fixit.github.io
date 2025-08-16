@@ -19,10 +19,15 @@ export function initFooter() {
             text: "+381 12 234 6789",
             slug: "#"
         },
+        {
+            name: "doc",
+            text: "DOKUMENTACIJA",
+            slug: "/public/img/dokumentacija.pdf"
+        },
     ]
 
     function infoMaker(icon) {
-        let line = `<li class="footer_mainInfoHolderItem p-2"><a class="footer_mainInfoHolderItemLink footer_mainInfoHolderItemLink--${icon.name} d-flex align-items-center" href="${icon.slug}">
+        let line = `<li class="footer_mainInfoHolderItem p-2"><a class="footer_mainInfoHolderItemLink footer_mainInfoHolderItemLink--${icon.name} d-flex align-items-center" href="${icon.slug}" target="_blank">
         <span class="footer_mainInfoHolderItemLinkText">
             ${icon.text}
         </span></a></li>`;
