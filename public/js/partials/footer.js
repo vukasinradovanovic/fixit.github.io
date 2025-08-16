@@ -22,7 +22,7 @@ export function initFooter() {
         {
             name: "doc",
             text: "DOKUMENTACIJA",
-            slug: "public/img/dokumentacija.pdf"
+            slug: "img/dokumentacija.pdf"
         },
     ]
 
