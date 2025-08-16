@@ -313,43 +313,6 @@ a {
   color: #fff;
   text-shadow: 0 2px 8px #000;
 }
-.banner--job {
-  background-color: #003468;
-  min-height: 25rem;
-  background-image: url("../img/operant.jpg");
-  background-size: cover;
-  background-position: 0 -3.125rem;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-.banner--job .banner_overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 1;
-}
-.banner--job .row {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-.banner--job .banner_title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-.banner--job .banner_text {
-  font-size: 1.25rem;
-  margin-bottom: 1.875rem;
-}
-.banner--job .banner_title,
-.banner--job .banner_text {
-  color: #fff;
-  text-shadow: 0 2px 8px #000;
-}
 
 .mainForm {
   background-color: #fff;
