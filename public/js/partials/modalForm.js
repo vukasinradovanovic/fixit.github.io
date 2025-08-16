@@ -76,9 +76,59 @@ export function initModalForm() {
         }
     });
 
+    // Helper za prikaz greške
+    function showError(input, message) {
+        let errorDiv = input.parentElement.querySelector('.invalid-feedback');
+        if (!errorDiv) {
+            errorDiv = document.createElement('div');
+            errorDiv.className = 'invalid-feedback d-block';
+            input.parentElement.appendChild(errorDiv);
+        }
+        errorDiv.textContent = message;
+        input.classList.add('is-invalid');
+    }
+
+    function clearErrors(form) {
+        form.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+        form.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    }
+
     // Submit forme
     document.querySelector('.mainForm').addEventListener('submit', function (e) {
         e.preventDefault();
+        clearErrors(this);
+
+        const name = this.name;
+        const email = this.email;
+        const date = this.date;
+        const desc = this.desc;
+
+        const nameRegex = /^[A-Za-zČčĆćŠšĐđŽž\s\-]{2,30}$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+        const descRegex = /^.{10,250}$/;
+
+        let valid = true;
+
+        if (!nameRegex.test(name.value.trim())) {
+            showError(name, "Ime nije validno.");
+            valid = false;
+        }
+        if (!emailRegex.test(email.value.trim())) {
+            showError(email, "Email nije validan.");
+            valid = false;
+        }
+        if (!dateRegex.test(date.value.trim())) {
+            showError(date, "Datum nije validan.");
+            valid = false;
+        }
+        if (!descRegex.test(desc.value.trim())) {
+            showError(desc, "Opis mora imati bar 10 karaktera.");
+            valid = false;
+        }
+
+        if (!valid) return;
+
         const modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('questionModal'));
         modal.hide();
         this.reset();
